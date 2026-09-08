@@ -14,15 +14,23 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.UUID)
 
     private String id;
+    @Column(name="gutenbergId")
     private String gutenbergId;
-    private String title;
-    private String author;
 
+    @Column(name="Title")
+    private String title;
+
+    @Column(name="Author")
+    private String author;
     @ElementCollection
     @CollectionTable(name="book_subjects",joinColumns = @JoinColumn(name="book_id"))
-    @Column(name="subject")
+     @Column(name="subject")
     private List <String>allSubjects;
+
+    @Column(name="DownLoadCount ")
     private int downloadCount;
+
+    @Column(name="CoverImage")
     private String coverImageUrl;
 
 

@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestClient;
 
 @Configuration
-public class configClient {
+public class ConfigClient {
 
     @Value("${gutenberg.api.key}")
     private String apiKey;
